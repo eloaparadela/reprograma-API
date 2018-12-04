@@ -66,7 +66,7 @@ export function alteraPostit(dados) {
       description: dados.texto
     }
     api
-      .put(this.baseURL + url, json)
+      .put( url, json)
       .then(() => {
         dispatch({ type: 'ALTERA_POSTIT', dados })
       })
