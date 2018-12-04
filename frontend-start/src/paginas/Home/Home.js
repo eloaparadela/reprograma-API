@@ -31,10 +31,12 @@ class Home extends Component {
     if (!this.props.usuario) {
       return <Redirect to="/login" />
     }
-
     const postits = this.props.postits.filter(
-      item => item.titulo.toLowerCase().includes(this.props.filtro.toLowerCase())
-    )
+      item => {
+    console.log(item.titulo)
+        
+        return item.titulo.toLowerCase().includes(this.props.filtro.toLowerCase())
+}    )
 
     return (
       <main className="home">
